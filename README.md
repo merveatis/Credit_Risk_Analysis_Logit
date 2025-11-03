@@ -10,7 +10,7 @@ The goal is to identify how different financial and demographic factors affect t
 
 ---
 
-## 📊 Project Overview
+## Project Overview
 
 - **Goal:** Determine which customer attributes influence creditworthiness.
 - **Dataset:** German Credit Data (800 observations, 26 predictors)
@@ -19,14 +19,16 @@ The goal is to identify how different financial and demographic factors affect t
   1. Data cleaning and preprocessing  
   2. Mapping symbolic categorical codes (e.g., A32, A34) to descriptive labels  
   3. Dummy variable encoding  
-  4. Model building with `statsmodels.Logit`  
-  5. Statistical significance testing (p-values, LR test)  
-  6. Model evaluation (Accuracy, AUC, Confusion Matrix)  
-  7. Interpretation of coefficients and odds ratios  
+  4. Testing associations between categorical features and the target using **Chi-Square**  
+  5. Assessing the strength of relationships with **Cramer’s V** to decide which variables to retain  
+  6. Model building with `statsmodels.Logit`  
+  7. Statistical significance testing (p-values, LR test)  
+  8. Model evaluation (Accuracy, AUC, Confusion Matrix)  
+  9. Interpretation of coefficients and odds ratios  
 
 ---
 
-## 🧾 Data Description
+## Data Description
 
 The original dataset contained symbolic categorical variables (e.g., A11, A32, A65).  
 To make the model interpretable, these codes were manually mapped to descriptive labels before dummy encoding.
@@ -52,7 +54,7 @@ These mappings improve the interpretability of model coefficients and results.
 
 ---
 
-## 📈 Model Results
+## Model Results
 
 | Metric | Value | Interpretation |
 |---------|--------|----------------|
@@ -74,7 +76,7 @@ These mappings improve the interpretability of model coefficients and results.
 
 ---
 
-## 📊 Interpretation Highlights
+## Interpretation Highlights
 
 - Customers **with a positive checking account balance** are more likely to get credit approval.  
 - Those **with no checking account** have a significantly lower chance.  
@@ -84,7 +86,7 @@ These mappings improve the interpretability of model coefficients and results.
 
 ---
 
-## 🧮 Technical Details
+## Technical Details
 
 | Library | Purpose |
 |----------|----------|
@@ -95,7 +97,7 @@ These mappings improve the interpretability of model coefficients and results.
 
 ---
 
-## 🚀 Next Steps
+## Next Steps
 
 - Compare this model with **Random Forest** or **XGBoost**  
 - Try `class_weight='balanced'` to address class imbalance  
@@ -103,7 +105,7 @@ These mappings improve the interpretability of model coefficients and results.
 
 ---
 
-## 📚 Author
+##  Author
 **Merve Atiş**  
 Marmara University – Department of Econometrics  
 [GitHub](https://github.com/merveatis)
